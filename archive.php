@@ -58,5 +58,6 @@ get_header();
 					<?php endif; ?>
 			</div>
 		</div>
+		<?php do_action('kl_sidebar','kl-main-sidebar');?>
 	</div>
 <?php get_footer(); ?>

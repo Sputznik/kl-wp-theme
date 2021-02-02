@@ -39,3 +39,9 @@ add_action( 'after_setup_theme', function() {
 	add_theme_support( 'post-formats', array( 'standard', 'gallery', 'video', 'audio', 'link', 'quote' ) ); //Post formats
 	add_theme_support( 'post-thumbnails' ); // Post thumbnails
 });
+
+/* ADD SOW FROM THE THEME */
+add_action('siteorigin_widgets_widget_folders', function( $folders ){
+  $folders[] = get_template_directory() . '/so-widgets/';
+  return $folders;
+});

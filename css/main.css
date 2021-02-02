@@ -484,7 +484,8 @@ ul.kl-featured-list{
 
 /* col-1 */
 .kl-list-grid .kl-post-wrapper > .kl-post-thumbnail,
-.kl-featured-list .kl-post-thumbnail{
+.kl-featured-list .kl-post-thumbnail,
+.kl-latest-posts .kl-post-thumbnail{
 	display: inline-block;
 	position: relative;
 	transition: opacity 0.3s;
@@ -498,7 +499,8 @@ ul.kl-featured-list{
 .kl-list-grid .kl-thumbnail-bg,
 .kl-related-post .kl-thumbnail-bg,
 .kl-featured-grid .kl-thumbnail-bg,
-.kl-featured-list .kl-thumbnail-bg{
+.kl-featured-list .kl-thumbnail-bg,
+.kl-latest-posts .kl-thumbnail-bg{
 	width: 100%;
 	height: 100%;
   display: inline-block;
@@ -1237,6 +1239,144 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 .wp-caption img{ width: 100%; max-width: 100%; border: none; outline: none; height: auto; margin: 0; padding: 0; }
 .wp-caption p.wp-caption-text{ width: 100%; margin: 0; padding: 11px 0 0; font-size: 14px; font-style: italic; line-height: 1.4; color: #888888; }
 
+/* SOW STYLES */
+.kl-popular-posts .sow-title,
+.kl-latest-posts .sow-title,
+.kl-hashtags .sow-title{
+  letter-spacing: 1px;
+  line-height: 1.3;
+  border-bottom: 3px solid #313131;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.kl-popular-posts .sow-title span,
+.kl-latest-posts .sow-title span,
+.kl-hashtags .sow-title span{
+  display: block;
+  position: relative;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 8px 0px 7px;
+}
+.kl-popular-posts .sow-title span:before,
+.kl-latest-posts .sow-title span:before,
+.kl-hashtags .sow-title span:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 40px;
+  height: 3px;
+  background-color: #e53935;
+}
+
+/* SOW POPULAR POSTS */
+.kl-popular-posts .kl-sow-posts,
+.kl-latest-posts .kl-sow-posts{
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.kl-popular-posts .kl-sow-posts li{
+  position: relative;
+  margin-bottom: 30px;
+}
+.kl-popular-posts .kl-sow-posts li:last-child{ margin-bottom: 0; }
+.kl-popular-posts .kl-sow-posts li .post-body{ overflow: hidden; }
+
+.kl-popular-posts .kl-post-thumbnail{
+  float: left;
+  margin-right: 20px;
+  position: relative;
+  transition: opacity 0.3s;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+}
+.kl-popular-posts .kl-thumbnail-bg{
+  width: 120px;
+  height: 100%;
+  display: inline-block;
+  background-color: #f5f5f5;
+  vertical-align: top;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+.kl-popular-posts .kl-sow-posts .post-info{ overflow: hidden; }
+.kl-popular-posts .kl-sow-posts .post-info .title,
+.kl-latest-posts .kl-sow-posts .post-info .title{ margin: 0; }
+.kl-popular-posts .kl-sow-posts .post-info .title a,
+.kl-latest-posts .kl-sow-posts .post-info .title a{
+  margin-bottom: 6px;
+  color: #313131;
+  display: block;
+  font-size: 14px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.kl-popular-posts .kl-sow-posts .post-info h4 a:hover,
+.kl-latest-posts .kl-sow-posts .post-info h4 a:hover{
+  color: #e53935;
+}
+.kl-popular-posts .kl-sow-posts .post-date,
+.kl-latest-posts .kl-sow-posts .post-date{
+  font-size: 12px;
+  letter-spacing: 0;
+  color: #888888;
+  font-family: 'PT Serif', sans-serif;
+}
+
+.kl-popular-posts .kl-sow-posts li .post-rank {
+  display: inline-block;
+  position: absolute;
+  top: -15px;
+  left: 5px;
+  z-index: 3;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  line-height: 28px;
+  text-align: center;
+  box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 25%);
+  background-color: rgba(255,255,255,.3);
+  border-radius: 50%;
+}
+
+.kl-popular-posts .kl-sow-posts li .rank-number {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: sans-serif;
+  line-height: 28px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  color: #fff;
+  background-color: #383838;
+}
+/* SOW LATEST POSTS */
+.kl-latest-posts .kl-sow-posts li{ padding-bottom: 26px }
+.kl-latest-posts .kl-sow-posts li:last-child{ padding-bottom: 0; }
+.kl-latest-posts .kl-post-thumbnail{ width: 100%; margin-bottom: 11px; }
+
+/* SOW HASHTAGS */
+.kl-hashtags a{ color: #313131; font-size: 16px; line-height: 1.8; }
+.kl-hashtags a:hover{ color: #e53935; }
+
+
 /* MEDIA QUERIES */
 @media only screen and (min-width: 961px){
   #kl-navigation .menu {
@@ -1261,6 +1401,11 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
   .header1 .inner-header .header-banner {
     width: 620px;
   }
+	/* SOW STYLES */
+  .kl-popular-posts .kl-sow-posts .post-info .title a,
+  .kl-latest-posts .kl-sow-posts .post-info .title a{ font-size: 14px; }
+  .kl-popular-posts .kl-sow-posts .post-date,
+  .kl-latest-posts .kl-sow-posts .post-date{ font-size: 11px; }
 }
 
 @media(max-width: 960px){

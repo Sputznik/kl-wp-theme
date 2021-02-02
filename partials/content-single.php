@@ -14,6 +14,16 @@
 			<span>20 बार देखा गया</span>
 		</div>
 	</div>
+	<?php
+		$video_meta = get_post_meta( $post->ID, '_format_video_embed', true );
+		if( has_post_format( 'video' ) && ( strlen( trim( $video_meta ) ) > 0 ) ):
+	?>
+	  <div class="video-container">
+	    <?php if ( wp_oembed_get( $video_meta ) ) : ?>
+	      <?php echo wp_oembed_get( $video_meta ); ?>
+	    <?php endif; ?>
+	  </div>
+	<?php endif; ?>
 	<div class="single-post-content"><?php the_content(); ?></div>
 
 	<?php do_action('kl_social_share', 'wrap-center');?>

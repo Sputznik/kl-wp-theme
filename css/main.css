@@ -990,6 +990,8 @@ ul.kl-featured-list{
 .kl-single-post-header  span.author a:hover{ color: #e53935; }
 .single-post-content iframe{ height: 350px; }
 /* SINGLE POST CONTENT */
+.single-post-wrapper .video-container { position: relative; padding-bottom: 56.25%; width: 100%; margin-bottom: 26px; }
+.single-post-wrapper .video-container iframe{ position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .single-post-content { margin-bottom: 33px; line-height: 28px; }
 .single-post-content p { font-size: 16px; line-height: 1.8; margin-bottom: 17px; }
 .single-post-content p:last-of-type { margin-bottom: 0; }

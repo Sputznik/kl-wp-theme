@@ -111,6 +111,31 @@ jQuery(document).ready(function(){
 			$this.addClass( 'loaded' );
 	});
 
+	/* KL FEATURED SLIDER */ 
+	jQuery( '.kl-featured-slider' ).each( function () {
+    var $this = jQuery( this ),
+      autoplay = $this.data( 'auto' ),
+      autotime = $this.data( 'autotime' ),
+      autospeed = $this.data( 'speed' );
+
+      $this.slick( {
+        dots          : false,
+        infinite      : true,
+        speed         : autospeed,
+        slidesToShow  : 1,
+        slidesToScroll: 1,
+        autoplay      : false,
+        autoplaySpeed : autotime,
+        centerMode    : false,
+        variableWidth : false,
+        adaptiveHeight: true,
+        nextArrow     : '<button type="button" class="slick-next slick-nav"><i class="fa fa-angle-right"></i></button>',
+        prevArrow     : '<button type="button" class="slick-prev slick-nav"><i class="fa fa-angle-left"></i></button>'
+      } );
+
+      $this.parent().addClass( 'loaded' );
+  } );	// each
+
 	/* FIX TOPBAR SLICK MARGIN */
 	function fix_topbar() {
 		var $topbar_title = jQuery('.kl-headline .headline-title');

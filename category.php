@@ -3,9 +3,12 @@
  * This template will display category page
  */
 get_header();
+$term = $wp_query->get_queried_object();
+if( $term->parent && ( $term->parent != $term->term_id ) ){ $parent_term_ID = $term->parent; }
 ?>
 	<div class="container kl-breadcrumb">
 		<span><a class="crumb" href="<?php bloginfo('url');?>"><?php _e( 'खबर लहरिया', 'kl' ); ?></a></span><i class="fa fa-angle-right"></i>
+		<?php if( $parent_term_ID ){ echo kl_category_parents( $parent_term_ID ); } ?>
 		<span><?php single_cat_title('', true); ?></span>
 	</div>
 	<div class="container">

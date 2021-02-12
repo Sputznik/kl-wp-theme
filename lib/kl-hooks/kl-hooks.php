@@ -23,6 +23,25 @@ if ( ! function_exists( 'kl_numbered_pagination' ) ) {
 		if( $pagination ) { return '<div class="kl-pagination">'. $pagination . '</div>'; }
 	}
 }
+/* KL CATEGORY PARENTS */
+if ( ! function_exists( 'kl_category_parents' ) ) {
+	function kl_category_parents( $cat_id ) {
+		$level  = '';
+		$parent = get_term( $cat_id, 'category' );
+
+		if( is_wp_error( $parent ) ){ return ''; }
+
+		$name = $parent->name;
+
+		if ( $parent->parent && ( $parent->parent != $parent->term_id ) ) {
+			$level .= kl_get_category_parents( $parent->parent );
+		}
+
+		$level .= '<span><a class="crumb" href="' . esc_url( get_category_link( $parent->term_id ) ) . '">' . $name . '</a></span><i class="fa fa-angle-right"></i>';
+
+		return $level;
+	}
+}
 
 /* EXCERPT LENGTH */
 add_filter( 'excerpt_length', function( $length ){

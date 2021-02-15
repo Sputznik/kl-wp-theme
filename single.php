@@ -9,8 +9,9 @@ get_header();
 		<span><a class="crumb" href="<?php bloginfo('url');?>"><?php esc_html_e( 'खबर लहरिया', 'kl' ); ?></a></span><i class="fa fa-angle-right"></i>
 		<span>
 			<?php
-				$single_cat  = array_shift( get_the_category( get_the_ID() ) );
-				echo '<a class="crumb" href="'.get_category_link( $single_cat->term_id ).'">'.$single_cat->name.'</a>';
+				$single_cat = get_the_category( get_the_ID() );
+				$first_single_cat  = array_shift( $single_cat );
+				echo '<a class="crumb" href="'.get_category_link( $first_single_cat->term_id ).'">'.$first_single_cat->name.'</a>';
 			?>
 		</span><i class="fa fa-angle-right"></i>
 		<span><?php the_title(); ?></span>

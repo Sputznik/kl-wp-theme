@@ -4,6 +4,7 @@
  */
 get_header();
 $term = $wp_query->get_queried_object();
+$parent_term_ID = '';
 if( $term->parent && ( $term->parent != $term->term_id ) ){ $parent_term_ID = $term->parent; }
 ?>
 	<div class="container kl-breadcrumb">

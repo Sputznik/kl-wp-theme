@@ -7,6 +7,7 @@ $inc_files = array(
   'lib/class-kl-theme.php',
   'lib/wp-bootstrap-navwalker.php',
   'lib/customize-theme/customize-theme.php',
+  'lib/kl-orbit-cf/kl-orbit-cf.php',
   'lib/kl-hooks/kl-hooks.php',
   'lib/google-fonts.php'
 );

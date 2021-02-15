@@ -8,9 +8,17 @@ Widget URI:
 Video URI:
 */
 class KL_POPULAR_POSTS extends SiteOrigin_Widget{
-  function __construct() {
+
+  public $categories_arr = array();
+
+  function __construct(){
+
+    global $kl_customize;
+    $this->categories_arr =  $kl_customize->kl_post_categories();
+
 		//Here you can do any preparation required before calling the parent constructor, such as including additional files or initializing variables.
 		//Call the parent constructor with the required arguments.
+
 		parent::__construct(
 			// The unique id for your widget.
 			'kl-popular-posts',
@@ -35,7 +43,7 @@ class KL_POPULAR_POSTS extends SiteOrigin_Widget{
 					'type' 		=> 'select',
 					'label' 	=> __( 'Filter by Category', 'siteorigin-widgets' ),
 					'default' 	=> 'all',
-					'options' 	=> $this->get_kl_post_categories()
+					'options' 	=> $this->categories_arr
 				),
         'posts_count'  =>  array(
           'type'  =>  'text',
@@ -47,18 +55,6 @@ class KL_POPULAR_POSTS extends SiteOrigin_Widget{
 			get_template_directory()."/so-widgets/kl-popular-posts"
 		);
 	}
-
-  // Post categories
-  function get_kl_post_categories(){
-    $kl_categories = array('all'=> 'All Categories');
-    $categories = get_categories( array( 'orderby' => 'name','order' => 'ASC' ) );
-
-    foreach ( $categories as $key => $value ){
-      $kl_categories[$value->slug] = $value->name;
-    }
-
-    return $kl_categories;
-  }
 
   function get_template_name($instance){
     return 'template';

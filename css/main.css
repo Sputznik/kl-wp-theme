@@ -687,7 +687,7 @@ ul.kl-featured-list{
 .kl-featured-slider .kl-post-thumbnail{ width: 100%; }
 .kl-featured-slider .kl-thumbnail-bg:before{ padding-top: 170px; }
 .kl-featured-slider .item:nth-child(4n+1) .kl-thumbnail-bg:before{ padding-top: 518px; }
-.kl-post-thumbnail .post-format-icon{
+.kl-featured-slider .kl-post-thumbnail .post-format-icon{
   opacity: 0;
 	width: 36px;
 	height: 36px;

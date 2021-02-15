@@ -28,6 +28,8 @@
 			<div class="related-post-item">
 				<?php if( !empty( get_the_post_thumbnail() ) ) : $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]; ?>
 					<a class="kl-thumbnail-bg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>" style="background-image:url(<?php _e( $image_url );?>);"></a>
+				<?php else: ?>
+					<a class="kl-thumbnail-bg" href="<?php the_permalink() ?>" title="<?php the_title(); ?>"></a>
 				<?php endif; ?>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<span class="date"><?php  the_time('F j, Y'); ?></span>

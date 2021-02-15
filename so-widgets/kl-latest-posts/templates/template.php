@@ -1,10 +1,13 @@
 <?php
-$args = array(
-          'posts_per_page'      => $instance['posts_count'],
-          'category_name'       =>  ( $instance['category'] !== 'all' ? $instance['category'] : '' )
-        );
 
-$query = new WP_Query($args); if( $query->have_posts()) : ?>
+  $kl_latest_post_args = array(
+    'posts_per_page'      => !empty( $instance['posts_count'] ) ? $instance['posts_count'] : 3,
+    'category_name'       =>  ( $instance['category'] !== 'all' ? $instance['category'] : '' )
+  );
+
+  $query = new WP_Query( $kl_latest_post_args ); if( $query->have_posts() ) :
+
+?>
 
 <div class="kl-latest-posts">
   <h4 class="sow-title"><span class="inner-arrow"><?php _e( $instance['title'] );?></span></h4>

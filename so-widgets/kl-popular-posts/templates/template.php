@@ -1,14 +1,15 @@
 <?php
-  $args = array(
-            'posts_per_page'      => $instance['posts_count'],
-            'meta_key'            => 'penci_post_views_count',
-            'order'               => 'DESC',
-            'orderby'             => 'meta_value_num',
-            'category_name'       =>  ( $instance['category'] !== 'all' ? $instance['category'] : '' )
-          );
+
+  $kl_popular_posts_args = array(
+    'posts_per_page'      => !empty( $instance['posts_count'] ) ? $instance['posts_count'] : 3,
+    'meta_key'            => 'penci_post_views_count',
+    'order'               => 'DESC',
+    'orderby'             => 'meta_value_num',
+    'category_name'       =>  ( $instance['category'] !== 'all' ? $instance['category'] : '' )
+  );
 
 
-  $query = new WP_Query( $args );
+  $query = new WP_Query( $kl_popular_posts_args );
   if( $query->have_posts() ) :
 ?>
 

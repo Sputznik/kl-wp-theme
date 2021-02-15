@@ -1,8 +1,6 @@
 <a id="close-mobile-nav" class="header-1"><i class="fa fa-close"></i></a>
 <nav id="mobile-nav" class="header-1">
-	<div id="mobile-nav-logo">
-		<a href="<?php bloginfo('url'); ?>"><img src="https://khabarlahariya.org/wp-content/uploads/2018/10/KL-Logo-Black-300x217.png" alt="<?php bloginfo( 'name' ); ?>" /></a>
-	</div>
+	<?php do_action('kl_logo', 'mobile');?>
   <?php do_action('kl_topbar_social');?>
   <?php do_action('kl_nav_menu');?>
 </nav>
@@ -10,7 +8,7 @@
 <div class="header1">
   <div class="inner-header">
     <div class="container">
-      <?php include( KL_THEME_PATH.'/partials/logo.php' );?>
+			<?php do_action('kl_logo','desktop'); ?>
       <?php include( KL_THEME_PATH.'/partials/header-banner.php' );?>
     </div>
   </div>

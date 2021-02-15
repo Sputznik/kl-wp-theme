@@ -45,7 +45,11 @@ if ( ! function_exists( 'kl_category_parents' ) ) {
 
 /* EXCERPT LENGTH */
 add_filter( 'excerpt_length', function( $length ){
-	return 30;
+	global $kl_customize;
+
+	$default_length = $kl_customize->get_theme_option('default', 'excerpt_length', 30 );
+	return $default_length;
+
 });
 
 /* EXCERPT MORE */
@@ -67,6 +71,8 @@ add_action('kl_social_share', function( $style ){
 /* INCLUDES THE TOPBAR TEMPLATE */
 add_action('kl_topbar', function(){
 
+	global $kl_customize;
+
   $template = apply_filters('kl_topbar_template', KL_THEME_PATH.'/partials/topbar.php');
   include( $template );
 
@@ -83,11 +89,24 @@ add_action('kl_topbar_social', function(){
 /* INCLUDES THE HEADER TEMPLATE */
 add_action('kl_header', function(){
 
-	$header_template = apply_filters( 'kl_header1_template', KL_THEME_PATH.'/partials/headers/header1.php' );
+	global $kl_customize;
+
+	$header_type = $kl_customize->get_header_type();
+
+	$header_template = apply_filters( 'kl_'.$header_type.'_template', KL_THEME_PATH.'/partials/headers/'.$kl_customize->get_header_type().'.php' );
 
 	require_once( $header_template );
 
 });
+
+/* PRINT LOGOS TO THE HEADER */
+add_action('kl_logo', function( $screen_type ){
+
+	$template = apply_filters('kl_logo_template', KL_THEME_PATH.'/partials/logo.php');
+
+	include( $template );
+
+}, 1);
 
 /* INCLUDES THE SINGLE POST PAGINATION TEMPLATE */
 add_action('kl_post_pagination', function(){

@@ -2,13 +2,17 @@
 <div class="kl-top-bar">
   <div class="container">
     <div class="kl-headline">
-      <span class="headline-title"><?php _e('ताज़ा समाचार', 'kl' ); ?></span>
+      <span class="headline-title">
+        <?php _e( $kl_customize->get_theme_option('topbar', 'title', 'News' ), 'kl'); ?>
+      </span>
       <?php do_action('kl_topbar_social');?>
       <?php
+        $posts_count = $kl_customize->get_theme_option('topbar', 'posts_count', '10' );
+        $posts_category    = $kl_customize->get_theme_option('topbar', 'category', 'all' );
         $args = array(
-          'post_type'	=> 'post',
-          'showposts'	=>	10,
-          'cat'				=>	'blog',
+          'post_type'	  => 'post',
+          'showposts'	  =>	$posts_count,
+          'cat'				  =>	$posts_category != 'all' ? $posts_category : '',
           'post_status'	=>	'publish'
         );
         $query = new WP_Query( $args );

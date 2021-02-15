@@ -1,5 +1,4 @@
 <?php
-
 define('KL_THEME_PATH', get_template_directory() );
 define('KL_THEME_URL', get_template_directory_uri() );
 
@@ -7,7 +6,9 @@ define('KL_THEME_URL', get_template_directory_uri() );
 $inc_files = array(
   'lib/class-kl-theme.php',
   'lib/wp-bootstrap-navwalker.php',
-  'lib/kl-hooks/kl-hooks.php'
+  'lib/customize-theme/customize-theme.php',
+  'lib/kl-hooks/kl-hooks.php',
+  'lib/google-fonts.php'
 );
 
 foreach( $inc_files as $inc_file ){ require_once( $inc_file ); }

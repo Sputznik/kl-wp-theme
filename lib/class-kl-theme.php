@@ -31,6 +31,15 @@ class KL_THEME{
 
 		wp_enqueue_script( 'kl-sticky-sidebar', KL_THEME_URL.'/js/theia-sticky-sidebar.js', array('jquery'), null, true );
 
+		// KL POST VIEWS COUNT
+		if( is_singular() ){
+			wp_enqueue_script('kl-post-views',KL_THEME_URL.'/js/kl-post-view-count.js', array('jquery'), time(), true );
+			wp_localize_script( 'kl-post-views', 'KL_POST_VIEW', array(
+				'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		    'token' =>  wp_create_nonce('kl_post_view_count')
+		  ) );
+		}
+
 	}
 
 

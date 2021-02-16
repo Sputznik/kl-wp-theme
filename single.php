@@ -22,6 +22,7 @@ get_header();
 			<div class="theiaStickySidebar">
 				<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'partials/content', 'single' ); ?>
+					<div data-behaviour="post-view-stat" data-id="<?php _e( $post->ID );?>"></div>
 				<?php endwhile; endif; ?>
 			</div>
 		</div>

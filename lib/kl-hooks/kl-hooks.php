@@ -108,6 +108,14 @@ add_action('kl_logo', function( $screen_type ){
 
 }, 1);
 
+/* INCLUDES THE FEATURED SLIDER */
+add_action('kl_featured_slider',function(){
+  $shortcode_str = do_shortcode( '[orbit_query style="featured-slider" posts_per_page="12" category_name="district"]' );
+	if( strlen( $shortcode_str ) > 0 ){
+		echo $shortcode_str;
+	}
+});
+
 /* INCLUDES THE SINGLE POST PAGINATION TEMPLATE */
 add_action('kl_post_pagination', function(){
 

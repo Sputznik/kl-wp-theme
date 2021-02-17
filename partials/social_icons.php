@@ -6,8 +6,8 @@
 	$option = $kl_customize->get_option();
 
 	/* VALUES FROM THE THEME CUSTOMIZE SECTION */
-	$icons_val = $option['social_media'];
-	if( isset( $icons_val ) && $icons_val ):
+	if( isset( $option['social_media'] ) && $option['social_media'] ):
+		$icons_val = $option['social_media'];
 ?>
 <div class="kl-topbar-social">
   <div class="topbar-social-inner">

@@ -26,7 +26,7 @@
 				<?php endif; ?>
 			</div>
 		</div>
-		<?php do_action('kl_sidebar','kl-main-sidebar');?>
+		<?php do_action('kl_sidebar','kl-archive-sidebar');?>
 	</div>
 
 

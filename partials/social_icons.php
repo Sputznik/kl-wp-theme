@@ -7,7 +7,7 @@
 
 	/* VALUES FROM THE THEME CUSTOMIZE SECTION */
 	$icons_val = $option['social_media'];
-	if( isset( $icons_val ) ):
+	if( isset( $icons_val ) && $icons_val ):
 ?>
 <div class="kl-topbar-social">
   <div class="topbar-social-inner">

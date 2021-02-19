@@ -43,6 +43,25 @@ if ( ! function_exists( 'kl_category_parents' ) ) {
 	}
 }
 
+/* KL CUSTOM LOGIN LOGO */
+add_action( 'login_enqueue_scripts', function(){
+	?>
+	<style type="text/css">
+		body {
+			background-color: #ffffff !important;
+		}
+		#login h1 a, .login h1 a {
+			background-image: url(<?php echo get_template_directory_uri(); ?>/images/kl-login-logo.png);
+			width:300px;
+			height:217px;
+			background-size: 300px 217px;
+			box-shadow: none;
+		}
+	</style>
+	<?php
+});
+
+
 /* EXCERPT LENGTH */
 add_filter( 'excerpt_length', function( $length ){
 	global $kl_customize;

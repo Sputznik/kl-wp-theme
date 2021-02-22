@@ -125,7 +125,7 @@
 		echo "body{ ";
 
 		if( isset( $fonts['body'] ) ){
-			echo "font-family: '".$fonts['body']."';";
+			echo "font-family: '".$fonts['body']."',sans-serif;";
 		}
 
 		$option = $kl_customize->get_option();
@@ -166,7 +166,7 @@
 				_e($selector."{ ");
 
 				// ADD FONT FAMILY
-				if( isset($fonts[ $element ]) ){ _e("font-family: '".$fonts[ $element ]."';"); }
+				if( isset($fonts[ $element ]) ){ _e("font-family: '".$fonts[ $element ]."',sans-serif;"); }
 
 				// ADD FONT SIZE
 				if( isset( $option['font_size'] ) && $option['font_size'] && isset( $option['font_size'][ $element ] ) ){

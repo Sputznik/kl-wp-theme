@@ -22,6 +22,9 @@ class KL_THEME{
 
 		wp_enqueue_style('kl-core-style', KL_THEME_URL.'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts' ), time() );
 
+		wp_enqueue_style('hindi-google-fonts', 'https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap', array('kl-core-style'), '1.0.0' );
+
+
 		//ENQUEUE SCRIPTS
 		wp_enqueue_script( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', array('jquery'), null, true );
 

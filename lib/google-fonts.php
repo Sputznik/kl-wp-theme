@@ -27,9 +27,9 @@
 		);
 
 		$fonts[] = array(
-			'slug'	=> 'hindi',
-			'name'	=> 'Hindi',
-			'url'	  => 'Hind:wght@300;400;500;600;700'
+			'slug'	=> 'hind',
+			'name'	=> 'Hind',
+			'url'	  => 'Hind'
 		);
 
 		$fonts[] = array(

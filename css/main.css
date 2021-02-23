@@ -118,10 +118,9 @@ h1.kl-page-title,
   line-height: 32px;
   padding: 0 15px;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   color: #111111;
   background: #e53935;
-  font-family: 'Raleway', sans-serif;
 }
 .kl-topbar-posts{ margin: 0 15px 0 49px; }
 .kl-topbar-posts .slick-prev,
@@ -152,8 +151,7 @@ h1.kl-page-title,
 .kl-topbar-posts .slick-next:hover { color: #ffffff; }
 .kl-topbar-posts a.kl-topbar-post-title{
   color: #ffffff;
-  font-size: 12px;
-  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
   text-decoration: none;
   text-transform: uppercase;
   transition: color 0.3s;
@@ -220,14 +218,12 @@ h1.kl-page-title,
 #kl-navigation .menu li a {
 	position: relative;
 	display: inline-block;
-  font-family: 'Raleway', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
 	font-weight: bold;
   letter-spacing: 1px;
 	line-height: 58px;
 	text-decoration: none;
   color: #ffffff;
-  text-transform: uppercase;
   -o-transition: .3s;
   -ms-transition: .3s;
   -moz-transition: .3s;
@@ -264,6 +260,7 @@ h1.kl-page-title,
 	position: relative;
 	overflow: hidden;
 	min-width: 200px;
+	font-size: 14px;
 	line-height: 1.4;
 	text-align: left;
 	border-bottom: 1px solid #e0e0e0;
@@ -1235,7 +1232,7 @@ ul.kl-featured-list{
 .single-post-pagination .next-title{
 	font-size: 14px;
 	font-weight: bold;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Hind', sans-serif;
 	letter-spacing: 1px;
 	line-height: 1.4;
 	text-transform: uppercase;
@@ -1292,7 +1289,7 @@ ul.kl-featured-list{
 	-moz-transition: opacity 0.2s;
 	text-align: center;
 }
-.related-post-item > h3{ margin: 0; font-weight: 600; font-size: 14px; letter-spacing: 0px; line-height: 1.4; }
+.related-post-item > h3{ margin: 0; font-weight: 700; font-size: 14px; letter-spacing: 0px; line-height: 1.4; }
 .kl-related-slider.loaded .related-post-item { opacity: 1; }
 .related-post-item img{ width: 100%; height: auto; }
 .related-post-item > a{ position: relative; display: inline-block; width: 100%; margin-bottom: 17px; }
@@ -1483,8 +1480,8 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
+  font-family: "Hind", sans-serif;
+  font-weight: 700;
   letter-spacing: 0;
   line-height: 1.4;
   text-decoration: none;
@@ -1542,20 +1539,19 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 
 
 /* MEDIA QUERIES */
-@media only screen and (min-width: 961px){
+@media(min-width: 961px){
   #kl-navigation .menu {
     display: inline-block;
   }
+	#kl-navigation ul.menu > li{
+    margin-right: 25px;
+  }
 }
-
 
 @media only screen and (min-width: 961px) and (max-width: 1169px) {
   /* .container, */
   #kl-navigation ul.menu>li.megamenu>ul.dropdown-menu {
     width: 940px;
-  }
-  #kl-navigation ul.menu>li, #kl-navigation .menu>ul>li {
-    margin-right: 16px;
   }
   .header1 .inner-header .container .logo.logo-desktop {
     width: 320px;

@@ -1,10 +1,17 @@
+<?php
+
+	global $kl_customize;
+
+	$option = $kl_customize->get_option();
+	if( isset( $option['show_topbar'] ) && $option['show_topbar'] == 1 ){ do_action('kl_topbar'); }
+
+?>
 <a id="close-mobile-nav" class="header-1"><i class="fa fa-close"></i></a>
 <nav id="mobile-nav" class="header-1">
 	<?php do_action('kl_logo', 'mobile');?>
   <?php do_action('kl_topbar_social');?>
   <?php do_action('kl_nav_menu');?>
 </nav>
-<?php do_action('kl_topbar');?>
 <div class="header1">
   <div class="inner-header">
     <div class="container">

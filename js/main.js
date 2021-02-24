@@ -1,7 +1,16 @@
 jQuery(document).ready(function(){
 
+	var topbarHeight = jQuery('.kl-top-bar').innerHeight();
+
 	function stickyHeader(){
-		var height = jQuery('.header1 .inner-header').innerHeight() + 32;
+
+		var height = jQuery('.header1 .inner-header').innerHeight();
+
+		// UPDATE THE HEIGHT ONLY IF THE TOPBAR EXISTS
+		if( topbarHeight ){
+			height += topbarHeight;
+		}
+
 		if( jQuery(window).scrollTop() > height ){
 			jQuery('#kl-navigation').addClass('sticky');
 		}
@@ -111,7 +120,7 @@ jQuery(document).ready(function(){
 			$this.addClass( 'loaded' );
 	});
 
-	/* KL FEATURED SLIDER */ 
+	/* KL FEATURED SLIDER */
 	jQuery( '.kl-featured-slider' ).each( function () {
     var $this = jQuery( this ),
       autoplay = $this.data( 'auto' ),

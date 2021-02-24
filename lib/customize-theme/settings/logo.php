@@ -28,4 +28,6 @@
 		/* Header Banner Redirect Url */
 		$kl_customize->text( $wp_customize, 'kl_logo_section', '[banner][redirect_url]', 'Banner Redirect Url', '');
 
+		$kl_customize->checkbox( $wp_customize, 'kl_logo_section', '[show_topbar]', 'Show Topbar' );
+
 	});

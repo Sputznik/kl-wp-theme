@@ -147,7 +147,7 @@ add_action('kl_post_pagination', function(){
 add_action( 'kl_sidebar', function( $kl_sidebar_id ){
 
 	if( is_active_sidebar( $kl_sidebar_id ) && $kl_sidebar_id ){
-		if( ( $kl_sidebar_id != 'pre-footer-sidebar' ) || ( $kl_sidebar_id != 'kl-page-sidebar' ) ){
+		if( ( $kl_sidebar_id != 'pre-footer-sidebar' ) ){
 			echo "<div id='kl-sticky-sidebar'><div class='theiaStickySidebar'>";
 			dynamic_sidebar( $kl_sidebar_id );
 			echo "</div></div>";

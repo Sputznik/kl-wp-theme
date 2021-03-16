@@ -1442,10 +1442,23 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 }
 .kl-popular-posts .kl-sow-posts li{
   position: relative;
-  margin-bottom: 30px;
 }
-.kl-popular-posts .kl-sow-posts li:last-child{ margin-bottom: 0; }
-.kl-popular-posts .kl-sow-posts li .post-body{ overflow: hidden; }
+.kl-popular-posts .kl-sow-posts li,
+.kl-latest-posts .kl-sow-posts li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dedede;
+  color: #888888;
+}
+.kl-popular-posts .kl-sow-posts li:last-child,
+.kl-latest-posts .kl-sow-posts li:last-child{
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.kl-popular-posts .kl-sow-posts li .post-body,
+.kl-latest-posts .kl-sow-posts li .post-body{ overflow: hidden; }
 
 .kl-popular-posts .kl-post-thumbnail{
   float: left;
@@ -1468,7 +1481,8 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-.kl-popular-posts .kl-sow-posts .post-info{ overflow: hidden; }
+.kl-popular-posts .kl-sow-posts .post-info,
+.kl-latest-posts .kl-sow-posts .post-info{ overflow: hidden; }
 .kl-popular-posts .kl-sow-posts .post-info .title,
 .kl-latest-posts .kl-sow-posts .post-info .title{ margin: 0; }
 .kl-popular-posts .kl-sow-posts .post-info .title a,
@@ -1531,7 +1545,19 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 /* SOW LATEST POSTS */
 .kl-latest-posts .kl-sow-posts li{ padding-bottom: 26px }
 .kl-latest-posts .kl-sow-posts li:last-child{ padding-bottom: 0; }
-.kl-latest-posts .kl-post-thumbnail{ width: 100%; margin-bottom: 11px; }
+.kl-latest-posts .kl-post-thumbnail{
+  float: left;
+  margin-right: 20px;
+  position: relative;
+	width: 120px;
+}
+.kl-latest-posts li.featured .post-info .title a{ font-size: 18px; }
+.kl-latest-posts li.featured .kl-post-thumbnail{
+	float: none;
+	width: 100%;
+	margin-right: 0;
+	margin-bottom: 11px;
+}
 
 /* SOW HASHTAGS */
 .kl-hashtags a{ color: #313131; font-size: 16px; line-height: 1.8; }
@@ -1565,7 +1591,7 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
   .kl-popular-posts .kl-sow-posts .post-info .title a,
   .kl-latest-posts .kl-sow-posts .post-info .title a{ font-size: 14px; }
   .kl-popular-posts .kl-sow-posts .post-date,
-  .kl-latest-posts .kl-sow-posts .post-date{ font-size: 11px; }
+  .kl-latest-posts .kl-sow-posts .post-date{ font-size: 12px; }
 }
 
 @media(max-width: 960px){

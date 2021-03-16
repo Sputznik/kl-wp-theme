@@ -12,9 +12,9 @@
 <div class="kl-latest-posts">
   <h4 class="sow-title"><span class="inner-arrow"><?php _e( $instance['title'] );?></span></h4>
   <ul class="kl-sow-posts">
-    <?php while( $query->have_posts() ) : $query->the_post(); ?>
+    <?php $counter = 1; while( $query->have_posts() ) : $query->the_post(); ?>
     <?php if( !empty( get_the_post_thumbnail() ) ) : $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]; endif;?>
-    <li>
+    <li <?php if( $counter == 1 && $instance['featured'] ){ echo 'class="featured"'; }?>>
       <div class="post-body">
         <div class="kl-post-thumbnail">
           <a href="<?php the_permalink(); ?>" class="kl-thumbnail-bg" style="background-image:url(<?php _e( $image_url );?>);"></a>
@@ -25,7 +25,7 @@
         </div>
       </div>
     </li>
-    <?php endwhile; ?>
+    <?php $counter++; endwhile; ?>
   </ul>
 </div>
 

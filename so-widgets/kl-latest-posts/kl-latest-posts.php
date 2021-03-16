@@ -50,6 +50,11 @@ class KL_LATEST_POSTS extends SiteOrigin_Widget{
           'label' =>  __( 'Number of posts to show', 'siteorigin-widgets' ),
           'default' =>  '1',
         ),
+        'featured'  =>  array(
+          'type'  =>  'checkbox',
+          'label' =>  __( 'Display 1st post featured?', 'siteorigin-widgets' ),
+          'default' => false
+        ),
 			),
 			//The $base_folder path string.
 			get_template_directory()."/so-widgets/kl-latest-posts"

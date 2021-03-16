@@ -61,6 +61,11 @@ add_action( 'login_enqueue_scripts', function(){
 	<?php
 });
 
+/* KL CUSTOM LOGIN LOGO URL */
+function my_custom_login_url( $url ) {
+  return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'my_custom_login_url', 10, 1 );
 
 /* EXCERPT LENGTH */
 add_filter( 'excerpt_length', function( $length ){

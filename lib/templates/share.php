@@ -36,8 +36,6 @@
 	  <div class="social-share-inner">
 			<?php if( is_page() ):?>
 				<span class="share-text"><?php _e( 'साझा करें', 'kl' ); ?></span>
-			<?php else:?>
-				<a class="kl-post-like"><i class="fa fa-heart-o"></i></a>
 			<?php endif;?>
 	    <?php foreach( $icons as $icon ):?>
 	      <a target="_blank" rel="nofollow" href="<?php _e( $icon['url'] )?>">

@@ -148,19 +148,27 @@ add_action('kl_post_pagination', function(){
 
 }, 1);
 
-/* INCLUDES THE SIDEBAR */
-add_action( 'kl_sidebar', function( $kl_sidebar_id ){
+/* INCLUDES THE STICKY SIDEBAR */
+add_action( 'kl_sticky_sidebar', function( $kl_sidebar_id ){
 
 	if( is_active_sidebar( $kl_sidebar_id ) && $kl_sidebar_id ){
-		if( ( $kl_sidebar_id != 'pre-footer-sidebar' ) ){
-			echo "<div id='kl-sticky-sidebar'><div class='theiaStickySidebar'>";
-			dynamic_sidebar( $kl_sidebar_id );
-			echo "</div></div>";
-		}
-		else{ dynamic_sidebar( $kl_sidebar_id ); }
+		echo "<div id='kl-sticky-sidebar'><div class='theiaStickySidebar'>";
+		dynamic_sidebar( $kl_sidebar_id );
+		echo "</div></div>";
 	}
 
 });
+
+/* INCLUDES THE NORMAL SIDEBAR */
+add_action( 'kl_sidebar', function( $kl_sidebar_id ){
+
+	if( is_active_sidebar( $kl_sidebar_id ) && $kl_sidebar_id ){
+		dynamic_sidebar( $kl_sidebar_id );
+	}
+
+});
+
+
 
 /* HEADER MENU ATTRIBUTES */
 add_action('kl_nav_menu', function(){

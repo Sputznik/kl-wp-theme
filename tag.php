@@ -21,6 +21,6 @@ get_header();
 				<?php endif;?>
 			</div>
 		</div>
-		<?php do_action('kl_sidebar','kl-page-sidebar');?>
+		<?php do_action('kl_sticky_sidebar','kl-page-sidebar');?>
 	</div>
 <?php get_footer(); ?>

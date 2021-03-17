@@ -24,10 +24,6 @@ get_header();?>
 				<?php endwhile; endif; ?>
 			</div>
 		</div>
-		<?php
-      if( is_active_sidebar('kl-page-sidebar') ){
-        dynamic_sidebar('kl-page-sidebar');
-      }
-    ?>
+    <?php do_action('kl_sidebar','kl-page-sidebar');?>
 	</div>
 <?php get_footer();?>

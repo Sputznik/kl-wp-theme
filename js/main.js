@@ -69,11 +69,10 @@ jQuery(document).ready(function(){
 	jQuery('[data-behaviour~=kl-related-posts]').each( function () {
 		var $this = jQuery( this ),
 			slide = 3,
-			tablet_slide = 2;
 			infinity = true,
 			autoplay = $this.data('auto'),
 			dots_show = $this.data('dots'),
-			arrows_show = $this.data('arrows'),
+			arrows_show = $this.data('arrows');
 			$this.slick({
 				infinite      : infinity,
 				slidesToShow  : slide,
@@ -91,20 +90,6 @@ jQuery(document).ready(function(){
 						settings  : {
 							slidesToShow  : 2,
 							slidesToScroll: 2
-						}
-					},
-					{
-						breakpoint: 960,
-						settings  : {
-							slidesToShow  : 2,
-							slidesToScroll: 2
-						}
-					},
-					{
-						breakpoint: 768,
-						settings  : {
-							slidesToShow  : tablet_slide,
-							slidesToScroll: tablet_slide
 						}
 					},
 					{
@@ -131,10 +116,10 @@ jQuery(document).ready(function(){
         dots          : false,
         infinite      : true,
         speed         : autospeed,
+				autoplaySpeed : autotime,
         slidesToShow  : 1,
         slidesToScroll: 1,
         autoplay      : false,
-        autoplaySpeed : autotime,
         centerMode    : false,
         variableWidth : false,
         adaptiveHeight: true,
@@ -143,7 +128,7 @@ jQuery(document).ready(function(){
       } );
 
       $this.parent().addClass( 'loaded' );
-  } );	// each
+  } ); // each
 
 	/* FIX TOPBAR SLICK MARGIN */
 	function fix_topbar() {

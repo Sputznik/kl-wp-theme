@@ -2,7 +2,13 @@
 
 class KL_THEME{
 
+	var $admin;
+
 	function __construct(){
+
+		// LOAD THE ADMIN CLASS
+		require_once('class-kl-theme-admin.php');
+		$this->admin = new KL_THEME_ADMIN;
 
 		/* LOAD THEME ASSETS */
 		add_action('wp_enqueue_scripts', array( $this, 'assets' ) );

@@ -11,4 +11,7 @@
     /* Excerpt Length */
     $kl_customize->text( $wp_customize, 'kl_general_section', '[default][excerpt_length]', 'Excerpt Length', '30' );
 
+		/* Default Image */
+		$kl_customize->image( $wp_customize, 'kl_general_section', '[default][img]', 'Default Image', '' );
+
 	});

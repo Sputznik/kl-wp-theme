@@ -168,6 +168,15 @@ add_action( 'kl_sidebar', function( $kl_sidebar_id ){
 
 });
 
+/* MODIFY SEARCH RESULTS PAGE */
+function kl_search_filter( $query ){
+  if( ! is_admin() && $query->is_main_query() ){
+    if( $query->is_search ){
+        $query->set( 'post_type', 'post' );
+    }
+  }
+}
+add_action( 'pre_get_posts', 'kl_search_filter' );
 
 
 /* HEADER MENU ATTRIBUTES */

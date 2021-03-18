@@ -1542,6 +1542,7 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 }
 
 @media(max-width: 767px) {
+	 h1.kl-page-title, .kl-page-title{ font-size: 36px; }
   .kl-list-grid > .kl-post, .kl-featured-list > .kl-post{ width: 100%; margin: 0 0 40px; }
   .kl-list-grid .kl-post-wrapper, .kl-featured-list .kl-post-wrapper{ display: block; }
 	.kl-list-grid .kl-post-wrapper > .kl-post-thumbnail, .kl-list-grid .kl-post-wrapper .kl-post-content,

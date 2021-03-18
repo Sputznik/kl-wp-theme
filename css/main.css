@@ -16,6 +16,7 @@ h1.kl-page-title, .kl-page-title{
 	font-family: 'Hind',sans-serif;
 }
 .kl-page-title h1{ display: inline-block; margin: 0; }
+.kl-category-desc{ font-size: 16px; line-height: 1.8; margin-bottom: 35px; }
 .kl-nothing-found { margin-bottom: 60px; text-align: center; color: #313131; font-size: 14px; }
 /* GENERAL STYLES */
 
@@ -503,7 +504,7 @@ ul.kl-list-grid, ul.kl-featured-list{
 	display: inline-block;
 	width: 50px;
 	height: 50px;
-	line-height: 46px;
+	line-height: 50px;
 	top: 50%;
 	left: 50%;
 	margin: -25px 0 0 -25px;
@@ -928,7 +929,7 @@ ul.kl-list-grid, ul.kl-featured-list{
   width: 30px;
   height: 30px;
   font-size: 13px;
-  line-height: 26px;
+  line-height: 30px;
   margin: -15px 0 0 -15px;
 }
 /* KL FEATURED GRID */

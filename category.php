@@ -16,6 +16,11 @@ if( $term->parent && ( $term->parent != $term->term_id ) ){ $parent_term_ID = $t
 		<div id="kl-main-content" class="kl-sticky-sidebar">
 			<div class="theiaStickySidebar">
 				<h1 class="kl-page-title"><?php printf( esc_html__( '%s', 'kl' ), single_cat_title( '', false ) ); ?></h1>
+				<?php if( category_description() ) : ?>
+					<div class="kl-category-desc">
+						<?php echo category_description(); ?>
+					</div>
+				<?php endif; ?>
 				<?php if ( have_posts() ) : ?>
 					<ul class="kl-list-grid">
 						<?php while ( have_posts() ) : the_post(); get_template_part('partials/post','common'); endwhile; ?>

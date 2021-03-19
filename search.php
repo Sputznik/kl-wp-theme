@@ -13,7 +13,7 @@
 	<div class="container">
 		<div id="kl-main-content" class="kl-sticky-sidebar">
 			<div class="theiaStickySidebar">
-				<h1 class="kl-page-title">खोज परिणाम <?php printf( esc_html__( '"%s"', 'kl' ), get_search_query() ); ?></h1>
+				<h1 class="kl-page-title">खोज परिणाम<?php if( strlen( trim( get_search_query() ) ) != 0 ){ printf( esc_html__( ' "%s"', 'kl' ), get_search_query() ); }?></h1>
 				<?php if ( have_posts() ) : ?>
 					<ul class="kl-list-grid">
 						<?php while ( have_posts() ) : the_post(); get_template_part('partials/post','common'); endwhile;?>

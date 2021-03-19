@@ -1,4 +1,5 @@
 <?php
+
   $formats = array(
     'gallery' => array(
       'class'	=> 'fa fa-picture-o'
@@ -21,7 +22,7 @@
 <?php if ( !empty( get_the_post_thumbnail() ) ) : $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]; endif;?>
 
 <div class="kl-post-thumbnail">
-  <a href="<?php the_permalink(); ?>" class="kl-thumbnail-bg" style="background-image:url(<?php _e( $image_url );?>);"></a>
+  <a href="<?php the_permalink(); ?>" class="kl-thumbnail-bg" <?php if( isset( $image_url ) && $image_url ){ echo 'style="background-image:url('.$image_url.');"'; } ?>></a>
   <?php foreach( $formats as $format => $icon ): ?>
     <?php if( has_post_format( $format ) ) : ?>
       <a href="<?php the_permalink() ?>" class="post-format-icon"><i class="<?php _e( $icon['class'] );?>"></i></a>

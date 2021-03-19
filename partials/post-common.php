@@ -5,27 +5,7 @@
 ?>
 <li class="kl-post">
 	<div class="kl-post-wrapper">
-		<?php if ( !empty( get_the_post_thumbnail() ) ) : $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'full' )[0]; ?>
-			<div class="kl-post-thumbnail">
-				<a href="<?php the_permalink() ?>" class="kl-thumbnail-bg" title="<?php the_title(); ?>" style="background-image:url(<?php _e( $image_url );?>);"></a>
-					<?php if ( has_post_format( 'gallery' ) ) : ?>
-						<span class="post-format-icon"><i class="fa fa-picture-o"></i></span>
-					<?php endif; ?>
-					<?php if ( has_post_format( 'video' ) ) : ?>
-						<span class="post-format-icon"><i class="fa fa-play"></i></span>
-					<?php endif; ?>
-					<?php if ( has_post_format( 'audio' ) ) : ?>
-						<span class="post-format-icon"><i class="fa fa-music"></i></span>
-					<?php endif; ?>
-					<?php if ( has_post_format( 'link' ) ) : ?>
-						<span class="post-format-icon"><i class="fa fa-link"></i></span>
-					<?php endif; ?>
-					<?php if ( has_post_format( 'quote' ) ) : ?>
-						<span class="post-format-icon"><i class="fa fa-quote-left"></i></span>
-					<?php endif; ?>
-			</div>
-		<?php endif; ?>
-
+		<?php if ( !empty( get_the_post_thumbnail() ) ) { get_template_part('partials/post', 'format'); } ?>
 		<div class="kl-post-content<?php if ( empty( get_the_post_thumbnail() ) ){ echo " fullwidth"; }?>">
 			<div class="header">
 				<span class="category">

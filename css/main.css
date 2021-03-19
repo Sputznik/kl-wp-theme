@@ -661,7 +661,7 @@ ul.kl-list-grid, ul.kl-featured-list{
   opacity: 0;
 	width: 36px;
 	height: 36px;
-	line-height: 32px;
+	line-height: 36px;
   top: 20%;
   left: auto;
   right: 5%;
@@ -681,7 +681,7 @@ ul.kl-list-grid, ul.kl-featured-list{
   left: 50%;
   width: 42px;
 	height: 42px;
-	line-height: 40px;
+	line-height: 42px;
   font-size: 18px;
 	margin: -21px 0 0 -21px;
 }

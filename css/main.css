@@ -79,7 +79,6 @@ h1.kl-page-title, .kl-page-title{
 .kl-notfound .kl-home a{
   color: #e53935;
   font-size: 12px;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 700;
   text-decoration: none;
@@ -142,7 +141,6 @@ h1.kl-page-title, .kl-page-title{
   color: #ffffff;
   font-size: 14px;
   text-decoration: none;
-  text-transform: uppercase;
   transition: color 0.3s;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -1065,7 +1063,6 @@ ul.kl-list-grid, ul.kl-featured-list{
 	font-weight: bold;
 	line-height: 1;
 	letter-spacing: 1px;
-	text-transform: uppercase;
 	color: #999999;
 	transition: color 0.3s;
 	-webkit-transition: color 0.3s;
@@ -1115,7 +1112,7 @@ ul.kl-list-grid, ul.kl-featured-list{
 .kl-single-post-header{ margin-bottom: 26px; }
 .kl-single-post-header .post-title { color: #313131; font-size: 45px; font-weight: 600; margin: 0; }
 .kl-single-post-header .author{ font-style: normal !important; }
-.kl-single-post-header  span.author a{ color: #313131; text-transform: capitalize; }
+.kl-single-post-header  span.author a{ color: #313131; }
 .kl-single-post-header  span.author a:hover{ color: #e53935; }
 .single-post-content iframe{ height: 350px; }
 /* SINGLE POST CONTENT */
@@ -1181,7 +1178,6 @@ ul.kl-list-grid, ul.kl-featured-list{
 	font-family: 'Hind', sans-serif;
 	letter-spacing: 1px;
 	line-height: 1.4;
-	text-transform: uppercase;
 	padding: 0 25px 0 0;
 }
 .single-post-pagination .next-title{ padding: 0 0 0 25px; }

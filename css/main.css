@@ -431,6 +431,37 @@ h1.kl-page-title, .kl-page-title{
 #searchform #s:focus { outline: none; }
 #searchform #s::placeholder{ color: #ffffff; }
 
+/* HEADER 2 */
+.header2 { margin-bottom: 140px; }
+.header2 #kl-navigation, .header2 .search-field #searchform input.search-input{ height: 82px; }
+.header2 #kl-navigation .button-menu-mobile, .header2 #kl-navigation ul.menu > li{ line-height: 82px; }
+
+.header2 .logo-desktop {
+  float: left;
+  display: block;
+  text-align: left;
+	width: 120px;
+	line-height: 82px;
+}
+
+.header2 .search-field{ width: 98%; height: 81px; left: 15px; }
+
+.header2 .kl-search-inner > .btn-search,
+.header2 .search-field .btn-close-search{ line-height: 82px; height: 82px; }
+
+.header2 #menu-kl-main-1.menu { float: none; }
+
+.header2 .kl-search { position: unset; float: right; margin-left: 15px; }
+
+.header2 #kl-navigation > .container-fluid{ position: relative; text-align: right; }
+
+.header2 #kl-navigation .menu > li:last-child::after{
+	content: "";
+	clear: both;
+}
+.header2 #kl-navigation .menu > li:last-child .dropdown-menu{ left: -147px; }
+.header2 #kl-navigation .menu > li:nth-last-child(2) .dropdown-menu{ left: -68px; }
+
 /* KL LIST GRID */
 ul.kl-list-grid, ul.kl-featured-list{
 	display: inline-block;
@@ -1534,6 +1565,10 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
   .kl-featured-slider .date{
     display: none;
   }
+
+	/* HEADER 2 */
+	.header2 .logo-desktop{ display: none; }
+	.header2 .search-field .btn-close-search{ right: 15px; }
 
 }
 

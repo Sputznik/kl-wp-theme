@@ -17,7 +17,8 @@
 
 		/* Header Type */
 		$headers_arr = apply_filters( 'kl_headers_options', array(
-			'header1' => 'Default'
+			'header1' => 'Default',
+			'header2' => 'Left Logo & Right Menu'
 		));
 
 		$kl_customize->dropdown( $wp_customize, 'kl_logo_section', '[header_type]', 'Header Type', 'header1', $headers_arr );

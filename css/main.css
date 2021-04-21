@@ -453,7 +453,7 @@ h1.kl-page-title, .kl-page-title{
 .header2 .kl-search-inner > .btn-search,
 .header2 .search-field .btn-close-search{ line-height: 100px; height: 100px; }
 
-.header2 #menu-kl-main-1.menu { float: none; }
+.header2 #kl-navigation .menu { float: none; }
 
 .header2 .kl-search { position: unset; float: right; margin-left: 15px; }
 

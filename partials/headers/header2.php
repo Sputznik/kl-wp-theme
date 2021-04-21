@@ -7,8 +7,8 @@
 <div class="header1 header2">
   <!-- Navigation -->
   <nav id="kl-navigation" class="navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="button-menu-mobile header-3"><i class="fa fa-bars"></i></div>
+    <div class="container">
+      <div class="button-menu-mobile"><i class="fa fa-bars"></i></div>
 			<?php do_action('kl_logo','desktop'); ?>
 			<?php do_action('kl_nav_menu');?>
 			<!-- SEARCH BAR -->

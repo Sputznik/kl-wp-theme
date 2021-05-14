@@ -1,28 +1,44 @@
 jQuery(document).ready(function(){
 
-	var topbarHeight = jQuery('.kl-top-bar').innerHeight();
+	var $topbar = jQuery('.kl-top-bar'),
+			topbarHeight = $topbar.innerHeight(),
+			headerHeight = 0,
+			headerType 	 = jQuery('.kl-header').data('kl-header'),
+			stickyTop  	 = ( headerType == 'header1' ) ? '60px' : ( topbarHeight ? '100px' : '160px' );
+
+ function fix_header(){
+	 if( topbarHeight ){
+
+		 if( headerType === 'header1'){
+			 headerHeight = jQuery('.header1 .inner-header').innerHeight() + topbarHeight;
+		 }
+		 if( headerType === 'header2' ){
+			 headerHeight = topbarHeight;
+		 }
+	 }
+
+	 else {
+		 if( headerType === 'header1'){
+			 headerHeight = jQuery('.header1 .inner-header').innerHeight();
+		 }
+		 if( headerType === 'header2' ){
+			 headerHeight = 0;
+		 }
+	 }
+ }
 
 	function stickyHeader(){
 
-		var height = jQuery('.header1 .inner-header').innerHeight();
-
-		// UPDATE THE HEIGHT ONLY IF THE TOPBAR EXISTS
-		if( topbarHeight ){
-			height += topbarHeight;
-		}
-
-		if( jQuery(window).scrollTop() > height ){
+		if( jQuery(window).scrollTop() > headerHeight ){
 			jQuery('#kl-navigation').addClass('sticky');
+			jQuery('body').css('margin-top', stickyTop);
 		}
 		else {
 			jQuery('#kl-navigation').removeClass('sticky');
+			jQuery('body').css('margin-top', '0px');
 		}
-	}
 
-	/* STICKY HEADER */
-	jQuery(window).scroll(function() {
-		stickyHeader();
-	});
+	}
 
 	/* BACK TO TOP */
 	jQuery('.scroll-top .back-to-top').on( 'click', function (e) {
@@ -30,12 +46,17 @@ jQuery(document).ready(function(){
 		jQuery( 'html, body' ).animate( { scrollTop: 0 }, 700 );
 	});
 
-	/* SHOWS BACK TO TOP BUTTON */
 	jQuery(window).scroll(function() {
+
+		/* STICKY HEADER */
+		stickyHeader();
+
+		/* SHOWS BACK TO TOP BUTTON */
 		if( jQuery(this).scrollTop() > 100 ){
 			jQuery('.scroll-top').addClass('show');
 		}
 		else { jQuery('.scroll-top').removeClass('show'); }
+
 	});
 
 	// HEADER 1 SEARCH BAR
@@ -166,5 +187,9 @@ jQuery(document).ready(function(){
 	jQuery('#close-mobile-nav.header-1').on('click', function(){
 		jQuery('body').removeClass('show-mobile-nav');
 	});
+
+	// EXECUTED ON PAGE LOAD
+	fix_header();
+	stickyHeader();
 
 });

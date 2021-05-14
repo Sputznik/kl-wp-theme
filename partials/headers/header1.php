@@ -4,7 +4,7 @@
   <?php do_action('kl_topbar_social');?>
   <?php do_action('kl_nav_menu');?>
 </nav>
-<div class="header1">
+<div class="header1 kl-header" data-kl-header="header1">
   <div class="inner-header">
     <div class="container">
 			<?php do_action('kl_logo','desktop'); ?>

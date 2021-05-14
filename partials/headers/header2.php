@@ -4,9 +4,9 @@
   <?php do_action('kl_topbar_social');?>
   <?php do_action('kl_nav_menu');?>
 </nav>
-<div class="header1 header2">
+<div class="header1 header2 kl-header" data-kl-header="header2">
   <!-- Navigation -->
-  <nav id="kl-navigation" class="navbar-fixed-top">
+  <nav id="kl-navigation">
     <div class="container">
       <div class="button-menu-mobile"><i class="fa fa-bars"></i></div>
 			<?php do_action('kl_logo','desktop'); ?>

@@ -1023,7 +1023,7 @@ ul.kl-list-grid, ul.kl-featured-list{
 	text-align: center;
   border-top: 1px solid #dedede;
 }
-.kl-social-share.wrap-center-page{ border-bottom: 1px solid #dedede; }
+.kl-social-share.wrap-center-page{ border-bottom: 1px solid #dedede; margin-top: 30px; }
 .kl-social-share.wrap-center-page .share-text{ font-size: 12px; font-weight: bold; color: #313131; margin-right: 5px; }
 .kl-social-share.default .social-share-inner{
 	display: inline-block;
@@ -1350,7 +1350,7 @@ ul.slick-dots li button:hover, ul.slick-dots li.slick-active button{ background:
 .scroll-top:hover{ opacity: .85; }
 
 /* FOOTER */
-.kl-clear-footer{ display: block; clear: both; width: 100%; height: 1px; margin-bottom: 29px; }
+.kl-clear-footer{ display: block; clear: both; width: 100%; height: 1px; margin-bottom: 30px; }
 #kl-footer{ text-align: center; background: #111111; color: #999999; }
 #kl-footer .kl-footer-inner{ padding: 20px 0; }
 #kl-footer ul.footer-menu{ vertical-align: top; }

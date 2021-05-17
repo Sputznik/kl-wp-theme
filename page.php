@@ -20,7 +20,7 @@ get_header();
 			<span><?php the_title(); ?></span>
 		</div>
 	<?php endif;?>
-	<div class="container">
+	<div id="kl-page-content" class="container">
 		<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
 			<?php the_content('Read the rest of this entry »'); ?>
 			<?php if( isset( $social_meta ) && empty( $social_meta ) ) { do_action('kl_social_share','wrap-center-page'); }?>

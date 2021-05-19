@@ -1,5 +1,5 @@
 <div class="kl-featured-wrapper">
-  <?php $featured_cat = get_category_by_slug( $atts['category_name'] ); ?>
+  <?php $featured_cat = get_category( $atts['cat'] ); ?>
   <div class="headline">
     <a href="<?php echo esc_url( get_category_link( $featured_cat->term_id ) ); ?>"><?php _e( $featured_cat->name ,'kl'); ?></a>
   </div>

@@ -102,6 +102,16 @@ add_action('kl_topbar', function(){
 
 }, 1);
 
+/* INCLUDES THE TOPBAR TEMPLATE */
+add_action('kl_topbar_menu', function(){
+
+	global $kl_customize;
+
+  $template = apply_filters('kl_topbar_menu_template', KL_THEME_PATH.'/partials/topbar-menu.php');
+  include( $template );
+
+}, 1);
+
 /* INCLUDES THE TOPBAR SOCIAL TEMPLATE */
 add_action('kl_topbar_social', function(){
 

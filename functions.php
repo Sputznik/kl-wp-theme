@@ -22,7 +22,8 @@ add_filter('show_admin_bar', '__return_false');
 add_action( 'init', function(){
   register_nav_menus( array(
     'primary' 	=> __( 'Primary Menu', 'kl' ),
-    'footer'    => __( 'Footer Menu', 'kl' )
+    'footer'    => __( 'Footer Menu', 'kl' ),
+    'topbar'    => __( 'Topbar Menu', 'kl' )
   ));
 });
 

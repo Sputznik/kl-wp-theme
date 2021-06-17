@@ -161,7 +161,7 @@ jQuery(document).ready(function(){
 	}
 
 	/* HEADER 1 MOBILE NAVBAR */
-	jQuery( '#mobile-nav.header-1 .menu .dropdown > a' ).append( '<span class="menu-toggler"><i class="fa fa-angle-down"></i></span>' );
+	jQuery( '#mobile-nav.header-1 .menu .dropdown > a, #mobile-nav.header-1 .topbar-menu .dropdown > a' ).append( '<span class="menu-toggler"><i class="fa fa-angle-down"></i></span>' );
 
 	// TOGGLE MOBILE MENU
 	jQuery('.button-menu-mobile').on('click', function(){

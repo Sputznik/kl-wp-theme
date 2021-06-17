@@ -1,5 +1,5 @@
 <!-- TOPBAR MENU -->
-<div id="kl-topbar-menu">
+<div class="kl-topbar-menu">
   <?php
     wp_nav_menu( array(
       'menu' 						=> 'topbar',

@@ -9,11 +9,6 @@
 	</head>
 	<body <?php body_class(); ?>>
 		<?php
-
-			global $kl_customize;
-
-			$option = $kl_customize->get_option();
-			if( isset( $option['show_topbar'] ) && $option['show_topbar'] == 1 ){ do_action('kl_topbar'); }
-
+			if( is_active_kl_topbar() ){ do_action('kl_topbar'); }
 			do_action('kl_header');
 		?>

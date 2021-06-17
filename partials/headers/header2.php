@@ -1,9 +1,4 @@
-<a id="close-mobile-nav" class="header-1"><i class="fa fa-close"></i></a>
-<nav id="mobile-nav" class="header-1">
-	<?php do_action('kl_logo', 'mobile');?>
-  <?php do_action('kl_topbar_social');?>
-  <?php do_action('kl_nav_menu');?>
-</nav>
+<?php do_action('kl_mobile_menu');?>
 <div class="header1 header2 kl-header" data-kl-header="header2">
   <!-- Navigation -->
   <nav id="kl-navigation">

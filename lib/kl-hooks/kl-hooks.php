@@ -92,6 +92,16 @@ add_action('kl_social_share', function( $style ){
 
 }, 1);
 
+/* Check if topbar is active */ 
+function is_active_kl_topbar(){
+	global $kl_customize;
+	$option = $kl_customize->get_option();
+	if( isset( $option['show_topbar'] ) && $option['show_topbar'] == 1 ){
+		return true;
+	}
+	return false;
+}
+
 /* INCLUDES THE TOPBAR TEMPLATE */
 add_action('kl_topbar', function(){
 
@@ -108,6 +118,16 @@ add_action('kl_topbar_menu', function(){
 	global $kl_customize;
 
   $template = apply_filters('kl_topbar_menu_template', KL_THEME_PATH.'/partials/topbar-menu.php');
+  include( $template );
+
+}, 1);
+
+/* INCLUDES THE TOPBAR TEMPLATE */
+add_action('kl_mobile_menu', function(){
+
+	global $kl_customize;
+
+  $template = apply_filters('kl_mobile_menu_template', KL_THEME_PATH.'/partials/mobile-menu.php');
   include( $template );
 
 }, 1);

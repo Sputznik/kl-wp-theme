@@ -100,60 +100,6 @@ h1.kl-page-title, .kl-page-title{
 
 /* TOP BAR */
 .kl-top-bar{ height: 32px; background: #000000; }
-.kl-top-bar .headline-title{
-  display: inline-block;
-  height: 32px;
-  float: left;
-  line-height: 32px;
-  padding: 0 15px;
-  font-weight: 700;
-  color: #111111;
-  background: #e53935;
-}
-.kl-topbar-posts{ margin: 0 15px 0 49px; }
-.kl-topbar-posts .slick-prev,
-.kl-topbar-posts .slick-next {
-  width: 16px;
-  height: 20px;
-  border: none;
-  background: none;
-  display: inline-block;
-  text-align: center;
-  line-height: 20px;
-  top: 50%;
-  left: -54px;
-  outline: none;
-  cursor: pointer;
-  position: absolute;
-  color: #999999;
-  font-size: 18px;
-  margin-top: -10px;
-  opacity: 0;
-  transition: color 0.3s;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  padding: 0;
-}
-.kl-topbar-posts .slick-next{ left: -32px; }
-.kl-topbar-posts .slick-prev:hover,
-.kl-topbar-posts .slick-next:hover { color: #ffffff; }
-.kl-topbar-posts a.kl-topbar-post-title{
-  color: #ffffff;
-  font-size: 14px;
-  text-decoration: none;
-  transition: color 0.3s;
-  -webkit-transition: color 0.3s;
-  -moz-transition: color 0.3s;
-  opacity: 0;
-  letter-spacing: 1px;
-  display: inline-block;
-  white-space: nowrap;
-  line-height: 32px;
-  font-weight: bold;
-}
-.kl-topbar-posts a.kl-topbar-post-title:hover{ color: #e53935; }
-.kl-topbar-posts a.kl-topbar-post-title:focus{ outline: none; }
-.loaded .kl-topbar-posts .slick-prev, .loaded .kl-topbar-posts .slick-next, .loaded a.kl-topbar-post-title{ opacity: 1; }
 .kl-topbar-social { display: inline-block; float: right; z-index: 10; position: relative; }
 .kl-topbar-social > .topbar-social-inner { display: inline-block; vertical-align: top; }
 .kl-topbar-social a {
@@ -1579,7 +1525,7 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 
 /* MEDIA QUERIES */
 @media(max-width: 960px){
-	.kl-headline .headline-title, .kl-topbar-posts, .kl-topbar-menu { display: none; }
+	.kl-topbar-menu { display: none; }
   .header1 .inner-header .container{ display: block; }
 	.header1 .logo-desktop{ width: 100%; margin: 0 auto; }
 	.header1 .logo-desktop a{ display: block; margin: 0 auto; }

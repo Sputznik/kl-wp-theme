@@ -3,7 +3,6 @@
 	$inc_files = array(
 		'settings/class-kl-customize.php',
 		'settings/general.php',
-		'settings/topbar.php',
 		'settings/logo.php',
 		'settings/fonts.php',
 		'settings/social_icons.php'

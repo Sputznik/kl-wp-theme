@@ -66,26 +66,6 @@ jQuery(document).ready(function(){
 		jQuery('.search-field input.search-input').focus();
 	});
 
-  /* TOPBAR SLICK POSTS */
-	jQuery('[data-behaviour~=kl-topbar-posts]').each( function () {
-		var $this = jQuery( this );
-		$this.slick({
-			dots          : false,
-			infinite      : true,
-			speed         : $this.data( 'speed' ),
-			slidesToShow  : 1,
-			slidesToScroll: 1,
-			vertical 			: true,
-			autoplay      : $this.data( 'auto' ),
-			autoplaySpeed : $this.data( 'autotime' ),
-			nextArrow     : '<button type="button" class="slick-next slick-nav"><i class="fa fa-angle-right"></i></button>',
-			prevArrow     : '<button type="button" class="slick-prev slick-nav"><i class="fa fa-angle-left"></i></button>'
-		});	// slick
-
-    fix_topbar();
-		$this.parent().addClass( 'loaded' );
-	});
-
 	/* RELATED POSTS SLIDER */
 	jQuery('[data-behaviour~=kl-related-posts]').each( function () {
 		var $this = jQuery( this ),
@@ -150,15 +130,6 @@ jQuery(document).ready(function(){
 
       $this.parent().addClass( 'loaded' );
   } ); // each
-
-	/* FIX TOPBAR SLICK MARGIN */
-	function fix_topbar() {
-		var $topbar_title = jQuery('.kl-headline .headline-title');
-		if ( $topbar_title.length ) {
-			var title_width = $topbar_title.outerWidth() + 70;
-			jQuery('[data-behaviour~=kl-topbar-posts]').css( 'margin-left', title_width + 'px' );
-		}
-	}
 
 	/* HEADER 1 MOBILE NAVBAR */
 	jQuery( '#mobile-nav.header-1 .menu .dropdown > a, #mobile-nav.header-1 .topbar-menu .dropdown > a' ).append( '<span class="menu-toggler"><i class="fa fa-angle-down"></i></span>' );

@@ -120,7 +120,7 @@ jQuery(document).ready(function(){
 				autoplaySpeed : autotime,
         slidesToShow  : 1,
         slidesToScroll: 1,
-        autoplay      : false,
+        autoplay      : autoplay,
         centerMode    : false,
         variableWidth : false,
         adaptiveHeight: true,
@@ -128,8 +128,22 @@ jQuery(document).ready(function(){
         prevArrow     : '<button type="button" class="slick-prev slick-nav"><i class="fa fa-angle-left"></i></button>'
       } );
 
+			// PAUSE SLIDESHOW
+			if( $this.hasClass('slideshow') ){
+
+				$this.mouseover( function() {
+					$this.slick('slickPause');
+				});
+
+				$this.mouseout( function() {
+					$this.slick('slickPlay')
+				});
+
+			}
+
       $this.parent().addClass( 'loaded' );
   } ); // each
+
 
 	/* HEADER 1 MOBILE NAVBAR */
 	jQuery( '#mobile-nav.header-1 .menu .dropdown > a, #mobile-nav.header-1 .topbar-menu .dropdown > a' ).append( '<span class="menu-toggler"><i class="fa fa-angle-down"></i></span>' );

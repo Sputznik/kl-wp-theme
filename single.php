@@ -26,6 +26,15 @@ get_header();
 				<?php endwhile; endif; ?>
 			</div>
 		</div>
-		<?php do_action('kl_sticky_sidebar','kl-main-sidebar');?>
+		<?php
+			/* TOGGLE SIDEBAR */
+			global $kl_customize;
+			$option = $kl_customize->get_option();
+			$category_ids = !empty( $option['single_post_categories'] ) ?  explode(',', $option['single_post_categories'] ) : '';
+
+			if( !empty( $category_ids ) && in_category( $category_ids ) ){
+				do_action('kl_sticky_sidebar','kl-alternate-single-post-sidebar');
+			} else{ do_action('kl_sticky_sidebar','kl-main-sidebar'); }
+		?>
  	</div>
 <?php get_footer(); ?>

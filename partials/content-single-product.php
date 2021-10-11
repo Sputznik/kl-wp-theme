@@ -18,4 +18,5 @@
 	</div>
 	<div class="single-post-content"><?php the_content(); ?></div>
 	<?php do_action('kl_social_share', 'wrap-center'); ?>
+  <div class="single-post-pagination"></div>
 </div>

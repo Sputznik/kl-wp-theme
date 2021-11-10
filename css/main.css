@@ -1532,6 +1532,14 @@ a img.aligncenter{ display: block; margin-left: auto; margin-right: auto }
 	 pointer-events: none;
 }
 
+/* WOOCOMMERCE SINGLE PRODUCT */
+body.single-product .woocommerce div.product p.price,
+body.single-product .woocommerce div.product span.price,
+body.single-product .woocommerce div.product .entry-summary .product_meta .posted_in > a,
+body.single-product .woocommerce div.product form.cart .variations label,
+body.single-product .woocommerce div.product form.cart .reset_variations{
+	color: #dd3333;
+}
 
 /* MEDIA QUERIES */
 @media(max-width: 960px){

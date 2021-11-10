@@ -37,3 +37,6 @@ add_action('siteorigin_widgets_widget_folders', function( $folders ){
   $folders[] = get_template_directory() . '/so-widgets/';
   return $folders;
 });
+
+/* REMOVE WOOCOMMERCE PRODUCT ZOOM FEATURE */
+add_filter('woocommerce_single_product_zoom_enabled', '__return_false');

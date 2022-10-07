@@ -27,7 +27,14 @@
 	  </div>
 	<?php endif; ?>
 	<div class="single-post-content"><?php the_content(); ?></div>
-
+  <div class="entry-comments">
+    <?php
+      // If comments are open or we have at least one comment, load up the comment template.
+      if ( comments_open() || get_comments_number() ) {
+        comments_template();
+      }
+    ?>
+  </div>
 	<?php do_action('kl_social_share', 'wrap-center');?>
 	<?php do_action('kl_post_pagination'); ?>
 	<?php get_template_part( 'lib/templates/related_posts' ); ?>

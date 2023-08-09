@@ -40,3 +40,9 @@ add_action('siteorigin_widgets_widget_folders', function( $folders ){
 
 /* REMOVE WOOCOMMERCE PRODUCT ZOOM FEATURE */
 add_filter('woocommerce_single_product_zoom_enabled', '__return_false');
+
+/* ADD CLASSIFICATION TAG TO RSS FEED ITEMS */
+add_action('rss2_item', 'add_classification_to_rss_nodes');
+function add_classification_to_rss_nodes() {
+	echo("<classification>UA13+</classification>");
+}

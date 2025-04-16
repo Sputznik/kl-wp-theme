@@ -11,7 +11,8 @@ $inc_files = array(
   'lib/kl-hooks/kl-hooks.php',
   'lib/google-fonts.php',
   'lib/kl-utils/kl-utils.php',
-  'lib/class-kl-theme-woocommerce-checkout.php'
+  'lib/class-kl-theme-woocommerce-checkout.php',
+  'lib/class-kl-theme-woocommerce-my-account.php'
 );
 
 foreach( $inc_files as $inc_file ){ require_once( $inc_file ); }

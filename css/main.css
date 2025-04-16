@@ -1750,6 +1750,22 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
 	color: #ffffff;
 }
 
+/* WOOCOMMERCE MY ACCOUNT */
+.kl-before-account-navigation {
+	margin-bottom: 30px;
+}
+
+.kl-before-account-navigation h1 {
+	margin-top: 0;
+	color: #685c4b;
+	font-size: 34px;
+}
+
+.kl-before-account-navigation p {
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.4em;
+}
 
 /* MEDIA QUERIES */
 @media(max-width: 960px){
@@ -1798,6 +1814,12 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
 
 	.kl-stories {
 		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media(min-width: 769px){
+	.kl-before-account-navigation h1 {
+		font-size: 36px;
 	}
 }
 

@@ -11,6 +11,8 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
+
+include( KL_THEME_PATH.'/partials/wc/account-dashboard-content.php' );
 ?>
 <?php
 	/**

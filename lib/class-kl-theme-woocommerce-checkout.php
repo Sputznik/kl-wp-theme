@@ -12,6 +12,9 @@ class KL_THEME_WOOCOMMERCE_CHECKOUT {
 
     add_action( 'init', array( $this, 'init_cb' ) );
 
+    // SHOW CUSTOM MESSAGE BEFORE CHECKOUT FORM
+    add_action( 'woocommerce_before_checkout_form', array( $this, 'before_checkout_form' ), 20 );
+
   }
 
   function remove_checkout_fields( $fields  ){
@@ -37,6 +40,10 @@ class KL_THEME_WOOCOMMERCE_CHECKOUT {
 
     // MOVE THE COUPON SECTION BELOW THE CHECKOUT FORM
     add_action( 'woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+  }
+
+  function before_checkout_form(){
+    echo '<div class="klwpt-woocommerce-checkout-notice">If you have a coupon, fill the form below and enter it at the bottom of this page.</div>';
   }
 
 }

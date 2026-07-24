@@ -1721,6 +1721,135 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
   text-align: right;
 }
 
+/* ORBIT KL STORIES */
+.kl-stories {
+	display: grid;
+	grid-template-columns:  repeat(4, 1fr);
+	gap: 30px;
+}
+
+.kl-stories .orbit-article-db {
+	padding: 15px;
+	border-radius: 10px;
+	background-color: #685c4b;
+}
+
+.kl-stories .orbit-thumbnail-bg {
+  border-radius: 10px;
+	min-height: 312px;
+}
+
+.kl-stories .post-title {
+	font-size: 20px;
+	line-height: 28px;
+	margin-top: 15px;
+}
+
+.kl-stories .post-desc,
+.kl-stories .post-title a {
+	color: #ffffff;
+}
+
+/* WOOCOMMERCE MY ACCOUNT */
+.kl-before-account-navigation {
+	margin-bottom: 30px;
+}
+
+.kl-before-account-navigation h1 {
+	margin-top: 0;
+	color: #685c4b;
+	font-size: 34px;
+}
+
+.kl-before-account-navigation p {
+	margin: 0;
+	font-size: 20px;
+	line-height: 1.4em;
+}
+
+.woocommerce-MyAccount-navigation ul {
+	padding: 0;
+	display: grid;
+	text-align: center;
+	margin-bottom: 32px;
+	border-bottom: 1px solid #685c4b;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+	display: inline-block;
+}
+
+.woocommerce-MyAccount-navigation a {
+	padding: 16px;
+	color: #000000;
+	display: block;
+	text-decoration: none;
+	border-radius: 8px 8px 0 0;
+}
+
+.woocommerce-MyAccount-navigation li.is-active a {
+	color: #80170e;
+	background: transparent;
+}
+
+.woocommerce-MyAccount-navigation a:hover {
+	color: #ffffff;
+	background: #746654;
+}
+
+/* DASHBOARD */
+.woocommerce-dashboard .woocommerce-MyAccount-navigation ul { margin: 0; }
+
+.kl-account-dashboard-content { padding: 90px 0; }
+
+.kl-account-dashboard-content h1 {
+	margin-top: 0;
+	color: #685c4b;
+	font-size: 48px;
+	margin-bottom: 45px;
+}
+
+.btn-more-premium-stories-wrapper { margin-top: 30px; }
+
+.kl-account-dashboard-content .btn-more-premium-stories {
+	display: inline-block;
+	border-radius: 50px;
+	text-decoration: none;
+	background: #685c4b;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 20px;
+}
+
+.kl-account-dashboard-content .btn-more-premium-stories:hover { background: #746654; }
+
+.kl-account-dashboard-content .kl-full-width-stretch { padding: 0 15px; }
+
+/* WOOCOMMERCE CHECKOUT PAGE COUPON */
+body.woocommerce-checkout .woocommerce-form-coupon-toggle {
+	margin-top: 40px;
+}
+
+/* WOOCOMMERCE CHECKOUT PAGE CUSTOM NOTICE */
+body.woocommerce-checkout .klwpt-woocommerce-checkout-notice {
+	position: relative;
+	word-wrap: break-word;
+	color: #515151;
+	margin-bottom: 32px;
+	padding: 16px 16px 16px 56px;
+	background-color: #f6f5f8;
+  border-top: 3px solid #1e85be;
+}
+
+body.woocommerce-checkout .klwpt-woocommerce-checkout-notice::before {
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	font-family: "WooCommerce";
+	content: "\e016";
+	color: #1e85be;
+}
+
 /* MEDIA QUERIES */
 @media(max-width: 960px){
 	.kl-topbar-menu { display: none; }
@@ -1765,6 +1894,39 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
 	/* HEADER 2 */
 	.header2 .logo-desktop{ width: 100px !important; margin: 0; margin-left: 15px; }
 	.header2 .search-field{ width: 98%; }
+
+	.kl-stories {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media(min-width: 769px){
+	/* WOOCOMMERCE MY ACCOUNT */
+	.kl-before-account-navigation h1 {
+		font-size: 36px;
+	}
+	.woocommerce-account .woocommerce-MyAccount-content,
+	.woocommerce-account .woocommerce-MyAccount-navigation {
+		float: none;
+		width: 100%;
+	}
+	.woocommerce-MyAccount-navigation ul {
+		grid-template-columns: repeat(6, minmax(100px, 1fr));
+	}
+
+	.kl-account-dashboard-content .btn-more-premium-stories {
+		padding: 24px;
+		font-size: 22px;
+	}
+
+	.kl-account-dashboard-content .kl-full-width-stretch {
+		padding: 0 30px;
+	}
+
+	/* WOOCOMMERCE CHECKOUT PAGE CUSTOM NOTICE */
+	body.woocommerce-checkout .klwpt-woocommerce-checkout-notice {
+		display: none;
+	}
 }
 
 @media(max-width: 767px) {
@@ -1807,6 +1969,11 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
   .kl-featured-slider .kl-thumbnail-bg:before, .kl-featured-slider .item:nth-child(4n+1) .kl-thumbnail-bg:before{ padding-top: 150px; }
 	/* KL FEATURED SLIDESHOW */
 	.kl-featured-slider.slideshow  .category, .kl-featured-slider.slideshow .date{ display: none; }
+
+	.kl-stories {
+		grid-template-columns: 1fr;
+	}
+
 }
 
 @media(max-width: 479px){

@@ -26,7 +26,7 @@ class KL_THEME{
 
 		wp_enqueue_style('google-fonts', $google_fonts_url, false, null );
 
-		wp_enqueue_style('kl-core-style', KL_THEME_URL.'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts' ), time() );
+		wp_enqueue_style('kl-core-style', KL_THEME_URL.'/css/main.css', array('bootstrap', 'font-awesome', 'google-fonts' ), KL_THEME_VERSION );
 
 		wp_enqueue_style('hindi-google-fonts', 'https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap', array('kl-core-style'), '1.0.0' );
 
@@ -36,13 +36,13 @@ class KL_THEME{
 
 		wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js', array('jquery'), null, true);
 
-		wp_enqueue_script( 'kl-core-js', KL_THEME_URL.'/js/main.js', array('bootstrap'), time(), true );
+		wp_enqueue_script( 'kl-core-js', KL_THEME_URL.'/js/main.js', array('bootstrap'), KL_THEME_VERSION, true );
 
 		wp_enqueue_script( 'kl-sticky-sidebar', KL_THEME_URL.'/js/theia-sticky-sidebar.js', array('jquery'), null, true );
 
 		// KL POST VIEWS COUNT
 		if( is_singular() ){
-			wp_enqueue_script('kl-post-views',KL_THEME_URL.'/js/kl-post-view-count.js', array('jquery'), time(), true );
+			wp_enqueue_script('kl-post-views',KL_THEME_URL.'/js/kl-post-view-count.js', array('jquery'), KL_THEME_VERSION, true );
 			wp_localize_script( 'kl-post-views', 'KL_POST_VIEW', array(
 				'ajaxurl' => admin_url( 'admin-ajax.php' ),
 		    'token' =>  wp_create_nonce('kl_post_view_count')

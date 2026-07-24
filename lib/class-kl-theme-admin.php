@@ -2,7 +2,7 @@
 
 	class KL_THEME_ADMIN{
 
-		var $post_types;
+		var $meta_boxes;
 
 		function __construct(){
 

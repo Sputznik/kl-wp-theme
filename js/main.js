@@ -173,6 +173,27 @@ jQuery(document).ready(function(){
 		jQuery('body').removeClass('show-mobile-nav');
 	});
 
+	// EXPAND ROW HORIZONTALLY BEYOND PARENT CONTAINER
+	jQuery( window ).on( 'resize load', function(){
+		jQuery('[data-behaviour="kl-full-width-stretched-row"]').each( function () {
+
+			const row 		 = jQuery( this );
+			const pageBody = jQuery('body');
+
+			// RESET THE ROW MARGIN
+			row.css({ 'margin-left': 0,'margin-right': 0 });
+
+			// CALCULATE THE LEFT AND RIGHT OFFSET
+			const leftMargin = row.offset().left - pageBody.offset().left;
+			const rightMargin = pageBody.outerWidth() - leftMargin - row.parent().outerWidth();
+
+			// SET THE ROW MARGIN
+			row.css({ 'margin-left': - leftMargin + 'px', 'margin-right': - rightMargin + 'px' });
+
+		} );
+
+	} ).trigger('resize');
+
 	// EXECUTED ON PAGE LOAD
 	fix_header();
 	stickyHeader();

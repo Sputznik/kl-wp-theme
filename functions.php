@@ -1,6 +1,17 @@
 <?php
-define('KL_THEME_PATH', get_template_directory() );
-define('KL_THEME_URL', get_template_directory_uri() );
+/*  CONSTANTS */
+if( !defined( 'KL_THEME_PATH' ) ){
+  define('KL_THEME_PATH', get_template_directory() );
+}
+
+if( !defined( 'KL_THEME_URL' ) ){
+  define('KL_THEME_URL', get_template_directory_uri() );
+}
+
+if( !defined( 'KL_THEME_VERSION' ) ){
+  define( 'KL_THEME_VERSION', time() );
+}
+
 
 // INCLUDE FILES
 $inc_files = array(

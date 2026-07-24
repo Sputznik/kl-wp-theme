@@ -9,7 +9,7 @@ if( !defined( 'KL_THEME_URL' ) ){
 }
 
 if( !defined( 'KL_THEME_VERSION' ) ){
-  define( 'KL_THEME_VERSION', time() );
+  define( 'KL_THEME_VERSION', '1.1.0' );
 }
 
 

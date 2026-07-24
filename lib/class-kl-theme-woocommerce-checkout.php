@@ -34,6 +34,9 @@ class KL_THEME_WOOCOMMERCE_CHECKOUT {
   function init_cb(){
     // REMOVE THE COUPON SECTION FROM ITS DEFAULT POSITION
     remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
+
+    // MOVE THE COUPON SECTION BELOW THE CHECKOUT FORM
+    add_action( 'woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
   }
 
 }

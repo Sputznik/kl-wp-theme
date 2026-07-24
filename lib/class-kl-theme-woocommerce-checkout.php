@@ -10,6 +10,8 @@ class KL_THEME_WOOCOMMERCE_CHECKOUT {
     // REMOVE FIELDS FROM ADDITIONAL INFORMATION SECTION
     add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
 
+    add_action( 'init', array( $this, 'init_cb' ) );
+
   }
 
   function remove_checkout_fields( $fields  ){
@@ -27,6 +29,11 @@ class KL_THEME_WOOCOMMERCE_CHECKOUT {
     }
 
     return $fields;
+  }
+
+  function init_cb(){
+    // REMOVE THE COUPON SECTION FROM ITS DEFAULT POSITION
+    remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
   }
 
 }

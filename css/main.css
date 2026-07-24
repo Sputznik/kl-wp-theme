@@ -1825,6 +1825,31 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
 
 .kl-account-dashboard-content .kl-full-width-stretch { padding: 0 15px; }
 
+/* WOOCOMMERCE CHECKOUT PAGE COUPON */
+body.woocommerce-checkout .woocommerce-form-coupon-toggle {
+	margin-top: 40px;
+}
+
+/* WOOCOMMERCE CHECKOUT PAGE CUSTOM NOTICE */
+body.woocommerce-checkout .klwpt-woocommerce-checkout-notice {
+	position: relative;
+	word-wrap: break-word;
+	color: #515151;
+	margin-bottom: 32px;
+	padding: 16px 16px 16px 56px;
+	background-color: #f6f5f8;
+  border-top: 3px solid #1e85be;
+}
+
+body.woocommerce-checkout .klwpt-woocommerce-checkout-notice::before {
+	position: absolute;
+	top: 16px;
+	left: 24px;
+	font-family: "WooCommerce";
+	content: "\e016";
+	color: #1e85be;
+}
+
 /* MEDIA QUERIES */
 @media(max-width: 960px){
 	.kl-topbar-menu { display: none; }
@@ -1896,6 +1921,11 @@ body.single-product .woocommerce div.product form.cart .reset_variations{
 
 	.kl-account-dashboard-content .kl-full-width-stretch {
 		padding: 0 30px;
+	}
+
+	/* WOOCOMMERCE CHECKOUT PAGE CUSTOM NOTICE */
+	body.woocommerce-checkout .klwpt-woocommerce-checkout-notice {
+		display: none;
 	}
 }
 
